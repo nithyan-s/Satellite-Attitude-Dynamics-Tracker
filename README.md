@@ -11,3 +11,12 @@ Key Features:
 - Cross-referencing with external log files for time-based data analysis.
 - Calculation of satellite attitude dump counts for telemetry verification.
 - Structured for high-performance, mission-critical environments.
+
+Sample TCH[Topographic Correction High] file data :-
+		GSAT-AB  TELECOMMAND HISTORY    PAGE-001			
+SL.NO	CODE	    COMMAND MNEMONIC	    DATE	    TIME	    STATUS
+1	    C24000C7	DECODER TEST COMMAND-2	01-Aug-24	00:10:00	CONFIRMD
+
+Sample TAB file data :-
+Date	    Time	    Timer	Driver_status	Pitch_dump_status	yaw_dump_status	Pitch_comp	Yaw_comp
+01-Aug-24	06:00:00	299.99	    OFF	            DISABLE	            DISABLE	        300	        60
