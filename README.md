@@ -1,22 +1,22 @@
-# Satellite-Attitude-Dynamics-Tracker
+# Spacecraft-Momentum-Management-Monitoring-Tool
 
 #Author - Nithyan
 
 Description: 
-This project is a real-time application designed for filtering and analyzing satellite attitude data, specifically focusing on pitch, yaw, and roll telemetry. It reads raw telemetry data, extracts specific command events (enable-disable) and associated time intervals, and cross-references these with an external time log to calculate dump counts and other relevant statistics. The system is optimized for high-performance real-time operations and is built to provide precise monitoring and analysis of satellite orientation, ensuring the effective control and adjustment of satellite positioning.
+This project is a periodic utility application designed for analyzing satellite momentum data, specifically focusing on pitch and yaw axes. It analyzes the history of commanding activity and extracts specific command events (enable-disable), associated time intervals, calculates dump counts, and other relevant statistics. The software is built to provide precise monitoring and analysis of satellite environment disturbances, ensuring the effective control and adjustment of satellite positioning.
 
 Key Features:
-- Real-time telemetry processing of pitch, yaw, and roll data.
-- Efficient command filtering for enable-disable events.
-- Cross-referencing with external log files for time-based data analysis.
-- Calculation of satellite attitude dump counts for telemetry verification.
+- Offline Telemetry processing of pitch, yaw momentum data.
+- Efficient command filtering for specific/required events.
+- Calculation of satellite momentum dump counts for bookkeeping of propellant consumption.
 - Structured for high-performance, mission-critical environments.
 
 Sample TCH[Topographic Correction High] file data :-<br>
-		GSAT-AB  TELECOMMAND HISTORY    PAGE-001  	
+		SAT-AB  TELECOMMAND HISTORY    PAGE-001  	
 <br>SL.NO	CODE	    COMMAND MNEMONIC	    DATE	    TIME	    STATUS <br>
-1	    C24000C7	DECODER TEST COMMAND-2	01-Aug-24	00:10:00	CONFIRMD <br>
+1	    X24000Z7	 TEST COMMAND-2        	01-Aug-24	00:10:00	CONFIRMD <br>
+2	    X24000Z8	 TEST COMMAND-1        	01-Aug-24	00:15:00	CONFIRMD <br>
 
-Sample TAB file data :- <br>
+Sample TAB file data:- <br>
 Date	    Time	    Timer	Driver_status	Pitch_dump_status	yaw_dump_status	Pitch_comp	Yaw_comp <br>
 01-Aug-24	06:00:00	299.99	    OFF	            DISABLE	            DISABLE	        300	        60 <br>
